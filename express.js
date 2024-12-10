@@ -1,12 +1,12 @@
 const express = require('express');
-const cors = require('cors'); // Import the cors package
+const cors = require('cors');
 const app = express();
 const XLSX = require('xlsx');
 const PORT = process.env.PORT || 3030;
 
-// Enable CORS for the specific origin
+// Enable CORS for GitHub Pages
 app.use(cors({
-  origin: 'http://127.0.0.1:5500' // Allow requests only from this origin
+  origin: 'https://jpg113.github.io' 
 }));
 
 app.get('/students', function (req, res) {
